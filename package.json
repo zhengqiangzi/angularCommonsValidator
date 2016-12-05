@@ -1,0 +1,19 @@
+{
+  "name": "angular-commons-validator",
+  "version": "1.0.0",
+  "description": "angular validate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zhengqiangzi/angularCommonsValidator.git"
+  },
+  "author": "johnny_zheng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zhengqiangzi/angularCommonsValidator/issues"
+  },
+  "homepage": "https://github.com/zhengqiangzi/angularCommonsValidator#readme"
+}
