@@ -66,4 +66,4 @@ $scope.test="欠妥欠妥欠工"
   config.size:小数据点保留的长度  
   config.max:最大数  
   >
-
+  ---
