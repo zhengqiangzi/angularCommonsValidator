@@ -11,7 +11,7 @@ $scope.test="欠妥欠妥欠工"
 <input type="text" chinese-length='10' ng-model="test" />   
 
 ```
-###### 此处ng-model处的验证是失败的，$scope.test长度超出10个字符为12个长度
+*此处ng-model处的验证是失败的，$scope.test长度超出10个字符为12个长度*
 
 
 
