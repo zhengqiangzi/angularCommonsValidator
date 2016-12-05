@@ -50,4 +50,11 @@ $scope.test="欠妥欠妥欠工"
  + formatter-t
  
  ###### 指令叙述：禁止输入非数字字符（输入无效），对任何合法的且小于配置中 *config.max* 的数据四舍五入的保留 *config.size* 位小数
- 
+ ```html
+    
+     <form name="form1">
+        <input type="text" ng-model="v" formatters-t='{"size":5,max:100000000}' name="test" />
+    
+    </form>
+ ```
+ 此文本框用过*formatters-t*的指令后，当鼠标失去信息后，会保留5位小数据，当输入的值超过100000000时，不出任何处理
