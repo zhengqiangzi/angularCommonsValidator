@@ -40,8 +40,9 @@ $scope.test="欠妥欠妥欠工"
         <input type="text" ng-model="v" d-trigger name="test"  required />
     </form>
     相应的在input下方需要使用ng-if表格式来控制验证信息是否显示(采用ngMessages)
-    <div ng-messages="form1.test.$erorr" *ng-if=form1.test.$dirty*>
+    <div ng-messages="form1.test.$erorr" ng-if=form1.test.$dirty>
          <div ng-message="required">此项必填</div>
     </div>
     
  ```
+ 示例中当第一次进入页面时，错误验证信息不会显示 ，当鼠标在input上失去焦点后，验证信息显示,注意**ng-if**
