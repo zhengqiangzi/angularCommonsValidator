@@ -30,3 +30,11 @@ $scope.test="欠妥欠妥欠工"
     <input type="text" ng-model="v" chinese-name />
  ```
  此处ng-model处验证是失败的，chinese-name指令只允许出现汉字、下划线、英文字
+ 
+ 
+ + **dTrigger**
+ 
+ ###### 指令叙述：当鼠标在此指令上失去焦点后，此指把当前指令的ngModel的$dirty值改为true,为了实现鼠标失去焦点时，显示验证信息
+ ```html
+    <input type="text" ng-model="v" d-trigger />
+ ```
