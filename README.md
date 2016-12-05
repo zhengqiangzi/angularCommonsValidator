@@ -13,7 +13,7 @@ $scope.test="欠妥欠妥欠工"
 ```
 此处ng-model处的验证是失败的，$scope.test长度超出10个字符为12个长度
 
-
+---
 
 + **chineseName**
 
