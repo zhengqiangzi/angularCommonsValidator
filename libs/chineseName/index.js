@@ -1,4 +1,6 @@
-$app.directive('chineseName',function(){
+import app from '../module.js';
+
+app.directive('chineseName',function(){
 	// Runs during compile
 	return {
 		// name: '',
@@ -39,7 +41,10 @@ $app.directive('chineseName',function(){
     					return undefined;
 					}
 
+    				return viewValue
     			})
+
+
 		}
 	};
 });

@@ -1,6 +1,7 @@
 import app from '../module.js';
+import $ from 'jquery';
 
-app.directive('chineseLength',function(){
+app.directive('dTrigger',function(){
 	// Runs during compile
 	return {
 		// name: '',
@@ -17,37 +18,11 @@ app.directive('chineseLength',function(){
 		// compile: function(tElement, tAttrs, function transclude(function(scope, cloneLinkingFn){ return function linking(scope, elm, attrs){}})),
 		link: function($scope, iElm, iAttrs, ngModel) {
 			
-			var reg=/[^\x00-\x80]/g
-			var reg2=/\w/g
-  			ngModel.$parsers.push(function(viewValue){
 
-				if(viewValue==""){
-					ngModel.$setValidity('chineseLength',true);
+			$(iElm).blur(function(){
 
-					return ""
-				}
-
-				var bjA=viewValue.match(reg2);
-				var qjA=viewValue.match(reg);
-				var banjiao=bjA!=null?bjA.length:0;
-				var quanjiao=qjA!=null?qjA.length:0;
-				var len=banjiao+quanjiao*2
-
-				if(len<=parseInt(iAttrs.chineseLength,10)){
-
-					ngModel.$setValidity('chineseLength',true);
-
-					return viewValue
-				}else{
-
-					ngModel.$setValidity('chineseLength',false);
-
-					return undefined;
-				}
-
-					
-					return viewValue
-
+				ngModel.$setDirty(true)
+				
 			})
 
 

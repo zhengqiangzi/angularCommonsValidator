@@ -1,6 +1,6 @@
 {
   "name": "angular-commons-validator",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "angular validate",
   "main": "index.js",
   "scripts": {
@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/zhengqiangzi/angularCommonsValidator/issues"
   },
-  "homepage": "https://github.com/zhengqiangzi/angularCommonsValidator#readme"
+  "homepage": "https://github.com/zhengqiangzi/angularCommonsValidator#readme",
+  "dependencies": {
+    "angular": "1",
+    "angular-messages": "^1.5.9",
+    "babel-core": "^6.18.2",
+    "babel-loader": "6",
+    "babel-preset-es2015": "^6.18.0",
+    "jquery": "1"
+  }
 }

@@ -1,10 +1,49 @@
 <!doctype>
-<html>
+<html ng-app="validateModule">
 <head>	
 	<meta charset="utf-8"/>
 	<title>angular validate directive</title>
 </head>
-<body>
+<body ng-controller="testCtrl">
 	
+
+		<form name="form1" novalidate="novalidate">
+				
+				<input type="text" chinese-name  ng-model="gname" name="gname"
+				 d-trigger
+				 ng-minlength="5"
+				 required
+				 />
+
+				<div class="error"  ng-if="form1.gname.$dirty  || vali"  ng-messages="form1.gname.$error">
+					<div ng-message="chineseName">活动名称只能填写数字、字母、汉字或下划线</div>
+					<div ng-message="required">*</div>
+					<div ng-message="minlength">***</div>
+				</div>
+
+
+				<hr/>
+
+				<input type="text" chinese-length="10"  ng-model="gname2" name="cname"/>
+
+				<div class="error"  ng-messages="form1.cname.$error"  ng-if="form1.cname.$dirty  || vali">
+
+					<div ng-message="chineseLength">长度只能是10位(全角二个长度)</div>
+				</div>
+
+				<hr/>
+
+
+
+				<input type="text" formatters-t='{"size":5,max:100000000}' ng-model="ff" name="ff" />
+					
+				
+				<input type="submit" ng-click="valids()"/>
+
+		</form>
+	{{form1.gname}}
+
+
+	<script type="text/javascript" src="./dist/dist.js"></script>	
 </body>
 </html>
