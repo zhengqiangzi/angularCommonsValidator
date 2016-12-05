@@ -15,4 +15,18 @@ $scope.test="欠妥欠妥欠工"
 
 
 
++ **chineseName**
 
+###### 指令叙述：验证输入字符串的合法性（汉字、下划线、英文字母）
+
+```html
+    <script>
+        function test($scope){
+          $scope.v="hello@@@"
+        }
+        
+    </script>
+  
+    <input type="text" ng-model="v" chinese-name />
+ ```
+ 此处ng-model处验证是失败的，chinese-name指令只允许出现汉字、下划线、英文字
