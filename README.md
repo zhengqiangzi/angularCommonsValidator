@@ -36,5 +36,12 @@ $scope.test="欠妥欠妥欠工"
  
  ###### 指令叙述：当鼠标在此指令上失去焦点后，此指把当前指令的ngModel的$dirty值改为true,为了实现鼠标失去焦点时，显示验证信息
  ```html
-    <input type="text" ng-model="v" d-trigger />
+    <form name="form1">
+        <input type="text" ng-model="v" d-trigger name="test"  required />
+    </form>
+    相应的在input下方需要使用ng-if表格式来控制验证信息是否显示(采用ngMessages)
+    <div ng-messages="form1.test.$erorr">
+         <div ng-message="required">此项必填</div>
+    </div>
+    
  ```
