@@ -59,6 +59,6 @@ $scope.test="欠妥欠妥欠工"
  ```
  此文本框用过*formatters-t*的指令后，当鼠标失去信息后，会保留5位小数据，当输入的值超过100000000时，不出任何处理
  > # 配置文件 #
-    config={size:2,max:10000} 
-    config.size:小数据点保留的长度 
-    config.max:最大数 
+  config={size:2,max:10000}  
+  config.size:小数据点保留的长度  
+  config.max:最大数  
